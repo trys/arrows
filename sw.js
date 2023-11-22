@@ -4,13 +4,13 @@ which is in turn a modified version of Jeremy Keith's service worker (https://ad
 with a few additional edits borrowed from Filament Group's. (https://www.filamentgroup.com/sw.js)
 */
 (function() {
-const version = 'v1';
+const version = 'v2';
 const cacheName = ':arrows:';
 
 const staticCacheName = version + cacheName + 'static';
 const pagesCacheName = cacheName + 'pages';
 
-const staticAssets = ['/'];
+const staticAssets = ['/', 'style.css'];
 
 function updateStaticCache() {
 	// These items must be cached for the Service Worker to complete installation
